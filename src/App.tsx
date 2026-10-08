@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { ThemeProvider } from './context/ThemeContext';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
@@ -40,6 +41,9 @@ export default function App() {
 
         {/* Full Digital Resume / Print Modal */}
         <ResumeModal isOpen={isResumeOpen} onClose={() => setIsResumeOpen(false)} />
+
+        {/* Vercel Web Analytics */}
+        <Analytics />
       </div>
     </ThemeProvider>
   );
